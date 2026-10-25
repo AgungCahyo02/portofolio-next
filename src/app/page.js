@@ -11,9 +11,9 @@ const skills = [
 ];
 
 const hobi = [
-  "Bermain game",
-  "Membaca buku",
-  "Coding",
+  "Bermain futsal",
+  "Membaca komik",
+  "Mendesain poster",
 ];
 
 const rencana = [
@@ -23,9 +23,9 @@ const rencana = [
 ];
 
 const jadwal = [
-  { hari: "Senin", waktu: "08.00 - 10.00", kegiatan: "Membaca ulang modul" },
-  { hari: "Jum'at", waktu: "19.00 - 21.00", kegiatan: "Mengerjakan tugas praktik" },
-  { hari: "Minggu", waktu: "13.00 - 20.00", kegiatan: "Merekam video dan menulis laporan" },
+  { hari: "Senin", waktu: "19.00 - 20.00", kegiatan: "Membaca ulang modul" },
+  { hari: "Rabu", waktu: "19.00 - 21.00", kegiatan: "Mengerjakan tugas praktik" },
+  { hari: "Jumat", waktu: "19.30 - 20.30", kegiatan: "Merekam video dan menulis laporan" },
 ];
 
 export default function Home() {
@@ -83,18 +83,18 @@ export default function Home() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-gray-200 text-gray-700">
-                <th className="py-2 px-3 font-semibold">Hari</th>
-                <th className="py-2 px-3 font-semibold">Waktu</th>
-                <th className="py-2 px-3 font-semibold">Kegiatan</th>
+              <tr className="bg-utama text-white">
+                <th className="py-2.5 px-4 font-semibold">Hari</th>
+                <th className="py-2.5 px-4 font-semibold">Waktu</th>
+                <th className="py-2.5 px-4 font-semibold">Kegiatan</th>
               </tr>
             </thead>
             <tbody>
               {jadwal.map((item, index) => (
                 <tr key={index} className="border-b border-gray-100 text-gray-600">
-                  <td className="py-2 px-3">{item.hari}</td>
-                  <td className="py-2 px-3">{item.waktu}</td>
-                  <td className="py-2 px-3">{item.kegiatan}</td>
+                  <td className="py-2.5 px-4">{item.hari}</td>
+                  <td className="py-2.5 px-4">{item.waktu}</td>
+                  <td className="py-2.5 px-4">{item.kegiatan}</td>
                 </tr>
               ))}
             </tbody>
