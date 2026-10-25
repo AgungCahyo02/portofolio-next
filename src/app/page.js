@@ -11,9 +11,9 @@ const skills = [
 ];
 
 const hobi = [
-  "Bermain futsal",
-  "Membaca komik",
-  "Mendesain poster",
+  "Bermain game",
+  "Membaca buku",
+  "Ngoding",
 ];
 
 const rencana = [
