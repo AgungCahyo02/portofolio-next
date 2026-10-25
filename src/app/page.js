@@ -25,7 +25,7 @@ const rencana = [
 const jadwal = [
   { hari: "Senin", waktu: "19.00 - 20.00", kegiatan: "Membaca ulang modul" },
   { hari: "Rabu", waktu: "19.00 - 21.00", kegiatan: "Mengerjakan tugas praktik" },
-  { hari: "Jumat", waktu: "19.30 - 20.30", kegiatan: "Merekam video dan menulis laporan" },
+  { hari: "Minggu", waktu: "19.30 - 20.30", kegiatan: "Merekam video dan menulis laporan" },
 ];
 
 export default function Home() {
