@@ -1,5 +1,3 @@
-//page.js
-
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import SkillCard from "@/components/SkillCard";
