@@ -28,7 +28,7 @@ export const proyek = [
     {
         slug: "interactive-digital-profile-modul-3",
         judul: "Interactive Digital Profile MODUL 3",
-        kategori: "HTML, CSS, JavaScript ",
+        kategori: "HTML, CSS, JavaScript",
         minggu: "Minggu 03",
         gambar: "/proyek/foto-tugas3.png",
         deskripsi: "Pada modul ketiga, saya belajar menambahkan interaksi pada profil digital dengan cara menghubungkan struktur HTML dan CSS menggunakan event JavaScript.",

@@ -22,7 +22,7 @@ export default async function DetailProyek({ params }) {
 
     return (
         <main className="mx-auto max-w-3xl px-4 py-10">
-            <nav aria-label="Bredcrumb" className="text-sm text-gray-600">
+            <nav aria-label="Breadcrumb" className="text-sm text-gray-600">
                 <Link href="/" className="hover:underline">Beranda</Link>
                 {" / "}
                 <Link href="/proyek" className="hover:underline">Proyek</Link>

@@ -1,17 +1,11 @@
+//page.js
+
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import SkillCard from "@/components/SkillCard";
 import ProyekCard from "@/components/ProyekCard";
-import Kartu from "@/components/Kartu";
 import { proyek } from "@/data/proyek";
-
-const skills = [
-  { nama: "HTML", level: "Menengah" },
-  { nama: "CSS", level: "Menengah" },
-  { nama: "Git dan GitHub", level: "Dasar" },
-  { nama: "Desain poster dengan Canva", level: "Mahir" },
-  { nama: "JavaScript", level: "Dasar" },
-];
+import { keahlian } from "@/data/keahlian";
 
 const proyekTerbaru = proyek.slice(-3);
 
@@ -24,17 +18,19 @@ export default function Home() {
       />
 
       {/* Keahlian */}
-      <Kartu judul="Keahlian">
+      <section id="keahlian" className="scroll-mt-6">
+        <h2 className="mb-4 text-2xl font-bold text-utama">Keahlian</h2>
         <div className="grid gap-4 md:grid-cols-3">
-          {skills.map((skill) => (
-            <SkillCard
-              key={skill.nama}
-              nama={skill.nama}
-              level={skill.level}
-            />
+          {keahlian.map((item) => (
+            <SkillCard key={item.slug} nama={item.nama} level={item.level} />
           ))}
         </div>
-      </Kartu>
+        <Link
+          href="/keahlian"
+          className="mt-6 inline-block rounded-lg bg-utama px-5 py-2 text-sm font-semibold text-white">
+            Lihat semua keahlian
+          </Link>
+      </section>
 
       {/* Proyek Terbaru */}
       <section className="mt-10">
