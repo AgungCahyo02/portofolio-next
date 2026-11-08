@@ -1,13 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect } from "react";
 
 export default function TombolTema() {
-  const [gelap, setGelap] = useState(false);
+  // Dijalankan sekali setelah tombol tampil di browser: pakai tema yang tersimpan
+  useEffect(() => {
+    if (localStorage.getItem("tema") === "gelap") {
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
 
   function gantiTema() {
-    document.documentElement.classList.toggle("dark");
-    setGelap(!gelap);
+    const gelap = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("tema", gelap ? "gelap" : "terang");
   }
 
   return (
@@ -16,7 +21,7 @@ export default function TombolTema() {
       onClick={gantiTema}
       className="rounded-lg border border-white px-3 py-1 text-sm font-semibold text-white hover:border-aksen hover:bg-aksen"
     >
-      {gelap ? "Mode Terang" : "Mode Gelap"}
+      Mode Gelap
     </button>
   );
 }

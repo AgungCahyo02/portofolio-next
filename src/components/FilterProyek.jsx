@@ -21,7 +21,7 @@ export default function FilterProyek({ proyek }) {
 
   const kataKecil = kata.toLowerCase();
   const hasil = proyek.filter((p) => {
-    const cocokKategori = kategori === "Semua" || p.kategori === kategori;
+    const cocokKategori = kategori === "Semua" || p.kategori.includes(kategori);
     const cocokJudul = p.judul.toLowerCase().includes(kataKecil);
     const cocokDeskripsi = p.deskripsi.toLowerCase().includes(kataKecil);
     const cocokKata = cocokJudul || cocokDeskripsi;
