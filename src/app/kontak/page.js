@@ -1,3 +1,5 @@
+import FormKontak from "@/components/FormKontak";
+
 export const metadata = {
   title: "Kontak",
   description: "Hubungi Agung Cahyo melalui form kontak, email, atau GitHub.",
@@ -7,20 +9,20 @@ export default function Kontak() {
   return (
     <main className="mx-auto w-full max-w-5xl px-4 py-10 space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-utama md:text-4xl">
+        <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">
           Hubungi Saya
         </h1>
-        <p className="mt-2 text-gray-600">
+        <p className="mt-2 text-gray-600 dark:text-gray-400">
           Punya pertanyaan atau ingin bekerja sama? Isi form berikut.
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="mt-8 grid gap-6 md:grid-cols-3">
         {/* Formulir Kontak (Mengambil 2 Kolom) */}
-        <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm md:col-span-2">
+        <div className="rounded-xl border border-gray-100 bg-white dark:bg-gray-800 p-6 shadow-sm md:col-span-2">
           <form className="space-y-4">
             <div>
-              <label htmlFor="nama" className="block font-semibold text-gray-700">
+              <label htmlFor="nama" className="block font-semibold text-gray-700 dark:text-gray-300">
                 Nama lengkap
               </label>
               <input
@@ -29,12 +31,12 @@ export default function Kontak() {
                 name="nama"
                 placeholder="Contoh: Budi Santoso"
                 required
-                className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-utama"
+                className="mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-2 text-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-utama"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block font-semibold text-gray-700">
+              <label htmlFor="email" className="block font-semibold text-gray-700 dark:text-gray-300">
                 Email
               </label>
               <input
@@ -43,12 +45,12 @@ export default function Kontak() {
                 name="email"
                 placeholder="nama@gmail.com"
                 required
-                className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-utama"
+                className="mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-2 text-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-utama"
               />
             </div>
 
             <div>
-              <label htmlFor="hp" className="block font-semibold text-gray-700">
+              <label htmlFor="hp" className="block font-semibold text-gray-700 dark:text-gray-300">
                 Nomor HP
               </label>
               <input
@@ -56,18 +58,18 @@ export default function Kontak() {
                 id="hp"
                 name="hp"
                 placeholder="081234567890"
-                className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-utama"
+                className="mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-2 text-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-utama"
               />
             </div>
 
             <div>
-              <label htmlFor="keperluan" className="block font-semibold text-gray-700">
+              <label htmlFor="keperluan" className="block font-semibold text-gray-700 dark:text-gray-300">
                 Keperluan
               </label>
               <select
                 id="keperluan"
                 name="keperluan"
-                className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-utama"
+                className="mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-2 text-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-utama"
               >
                 <option value="">-- Pilih keperluan --</option>
                 <option value="pertanyaan">Pertanyaan</option>
@@ -77,7 +79,7 @@ export default function Kontak() {
             </div>
 
             <div>
-              <label htmlFor="pesan" className="block font-semibold text-gray-700">
+              <label htmlFor="pesan" className="block font-semibold text-gray-700 dark:text-gray-300">
                 Pesan
               </label>
               <textarea
@@ -87,7 +89,7 @@ export default function Kontak() {
                 maxLength={300}
                 placeholder="Tulis pesanmu di sini"
                 required
-                className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-utama"
+                className="mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-2 text-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-utama"
               />
             </div>
 
@@ -105,8 +107,8 @@ export default function Kontak() {
         </div>
 
         {/* Kotak Temukan Saya di (Tinggi otomatis memanjang penuh) */}
-        <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-utama">Temukan Saya di</h2>
+        <div className="rounded-xl border border-gray-100 bg-white dark:bg-gray-800 p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-utama dark:text-sky-200">Temukan Saya di</h2>
           <div className="mt-4 space-y-2">
             <a
               href="https://github.com/AgungCahyo02"

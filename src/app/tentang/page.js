@@ -26,13 +26,13 @@ const jadwal = [
 export default function Tentang() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-10 space-y-6">
-      <h1 className="text-3xl font-bold text-utama md:text-4xl">
+      <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">
         Tentang Saya
       </h1>
 
       {/* Kartu Perkenalan (Sebelumnya judulnya 'Tentang Saya') */}
       <Kartu judul="Perkenalan">
-        <p className="text-gray-600">
+        <p className="text-gray-600 dark:text-gray-400">
           Saya tinggal di Malang dan senang mencoba hal baru di dunia teknologi. Saya ingin bisa membuat website yang bermanfaat untuk sekolah dan UMKM di sekitar rumah.
         </p>
       </Kartu>
@@ -40,7 +40,7 @@ export default function Tentang() {
       {/* Hobi dan Cita-cita */}
       <div className="grid gap-6 md:grid-cols-2">
         <Kartu judul="Hobi">
-          <ul className="list-disc pl-5 space-y-1 text-gray-600">
+          <ul className="list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-400">
             {hobi.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -48,10 +48,10 @@ export default function Tentang() {
         </Kartu>
 
         <Kartu judul="Cita-cita">
-          <p className="mb-2 text-gray-600">
+          <p className="mb-2 text-gray-600 dark:text-gray-400">
             Menjadi <span className="font-semibold text-gray-900">Full Stack Web Developer</span>. Langkah yang saya rencanakan:
           </p>
-          <ol className="list-decimal pl-5 space-y-1 text-gray-600">
+          <ol className="list-decimal pl-5 space-y-1 text-gray-600 dark:text-gray-400">
             {rencana.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -72,7 +72,7 @@ export default function Tentang() {
             </thead>
             <tbody>
               {jadwal.map((item, index) => (
-                <tr key={index} className="border-b border-gray-100 text-gray-600">
+                <tr key={index} className="border-b border-gray-100 text-gray-600 dark:text-gray-400">
                   <td className="py-2.5 px-4">{item.hari}</td>
                   <td className="py-2.5 px-4">{item.waktu}</td>
                   <td className="py-2.5 px-4">{item.kegiatan}</td>

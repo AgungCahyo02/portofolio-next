@@ -13,8 +13,8 @@ export default function Hero({ nama, tagline }) {
                 className="rounded-full border-4 border-aksen object-cover aspect-square"
             />
             <div>
-                <h1 className="text-3xl font-bold text-utama md:text-5xl">Halo, saya {nama}!</h1>
-                <p className="mt-3 text-lg text-gray-700">{tagline}</p>
+                <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-5xl">Halo, saya {nama}!</h1>
+                <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">{tagline}</p>
 
                 <div className="mt-5 flex flex-wrap justify-center gap-3 md:justify-start">
                     <Link
@@ -25,7 +25,7 @@ export default function Hero({ nama, tagline }) {
                     </Link>
                     <a
                         href="#keahlian"
-                        className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50"
+                        className="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50"
                     >
                         Lihat keahlian
                     </a>
