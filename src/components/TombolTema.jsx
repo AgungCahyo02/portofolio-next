@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 
 export default function TombolTema() {
-  // Dijalankan sekali setelah tombol tampil di browser: pakai tema yang tersimpan
   useEffect(() => {
     if (localStorage.getItem("tema") === "gelap") {
       document.documentElement.classList.add("dark");
