@@ -9,7 +9,7 @@ Daftar proyek portofolio Agung Cahyo.
 | Kolom | Tipe | Keterangan |
 | --- | --- | --- |
 | `id` | `int8` | Primary key, nomor otomatis 1, 2, 3, ... |
-| `created_at` | `timestampz` | Waktu baris dibuat, terisi otomatis dengan `now()` |
+| `created_at` | `timestamptz` | Waktu baris dibuat, terisi otomatis dengan `now()` |
 | `slug` | `text` | Penanda unik di alamat, misalnya `halaman-profil` (unik) |
 | `judul` | `text` | Judul proyek |
 | `deskripsi` | `text` | Kalimat singkat tentang proyek |
@@ -37,6 +37,7 @@ RLS aktif tanpa policy, sehingga pengunjung tidak bisa membaca pesan. Policy `in
 ## Tabel `skills`
 
 Daftar keahlian Agung Cahyo.
+
 | Kolom | Tipe | Keterangan |
 | --- | --- | --- |
 | `id` | `int8` | Primary key, nomor otomatis 1, 2, 3, ... |
