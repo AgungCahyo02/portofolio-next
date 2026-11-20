@@ -4,10 +4,10 @@ export default function NotFound() {
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col items-center justify-center px-4 py-20 text-center">
       <p className="text-6xl font-bold text-red-600">404</p>
-      <h1 className="mt-4 text-2xl font-bold text-utama dark:text-sky-200">
+      <h1 className="mt-4 text-2xl font-bold text-primary">
         Halaman tidak ditemukan
       </h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-400">
+      <p className="mt-2 text-muted-foreground">
         Alamat yang kamu buka tidak ada atau sudah dipindahkan.
       </p>
       <Link
