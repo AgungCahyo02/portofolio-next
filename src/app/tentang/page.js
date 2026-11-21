@@ -1,4 +1,5 @@
 import Kartu from "@/components/Kartu";
+import { supabase } from "@/lib/supabase";
 
 export const metadata = {
   title: "Tentang",
@@ -17,13 +18,12 @@ const rencana = [
   "Bekerja sebagai Web Developer",
 ];
 
-const jadwal = [
-  { hari: "Senin", waktu: "19.00 - 20.00", kegiatan: "Membaca ulang modul" },
-  { hari: "Rabu", waktu: "19.00 - 21.00", kegiatan: "Mengerjakan tugas praktik" },
-  { hari: "Minggu", waktu: "19.30 - 20.30", kegiatan: "Merekam video dan menulis laporan" },
-];
+export default async function Tentang() {
+  const { data: jadwal } = await supabase
+    .from("jadwal")
+    .select("*")
+    .order("id");
 
-export default function Tentang() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-10 space-y-6">
       <h1 className="text-3xl font-bold text-primary md:text-4xl">
@@ -71,8 +71,8 @@ export default function Tentang() {
               </tr>
             </thead>
             <tbody>
-              {jadwal.map((item, index) => (
-                <tr key={index} className="border-b border-border text-muted-foreground">
+              {jadwal && jadwal.map((item) => (
+                <tr key={item.id} className="border-b border-border text-muted-foreground">
                   <td className="py-2.5 px-4">{item.hari}</td>
                   <td className="py-2.5 px-4">{item.waktu}</td>
                   <td className="py-2.5 px-4">{item.kegiatan}</td>
