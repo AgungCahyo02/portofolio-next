@@ -49,7 +49,7 @@ export default function Tentang() {
 
         <Kartu judul="Cita-cita">
           <p className="mb-2 text-muted-foreground">
-            Menjadi <span className="font-semibold text-gray-900">Full Stack Web Developer</span>. Langkah yang saya rencanakan:
+            Menjadi <span className="font-semibold text-foreground">Full Stack Web Developer</span>. Langkah yang saya rencanakan:
           </p>
           <ol className="list-decimal pl-5 space-y-1 text-muted-foreground">
             {rencana.map((item, index) => (
@@ -72,7 +72,7 @@ export default function Tentang() {
             </thead>
             <tbody>
               {jadwal.map((item, index) => (
-                <tr key={index} className="border-b border-gray-100 text-muted-foreground">
+                <tr key={index} className="border-b border-border text-muted-foreground">
                   <td className="py-2.5 px-4">{item.hari}</td>
                   <td className="py-2.5 px-4">{item.waktu}</td>
                   <td className="py-2.5 px-4">{item.kegiatan}</td>
