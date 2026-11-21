@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Hero({ nama, tagline }) {
     return (
@@ -16,19 +17,13 @@ export default function Hero({ nama, tagline }) {
                 <h1 className="text-3xl font-bold text-primary md:text-5xl">Halo, saya {nama}!</h1>
                 <p className="mt-3 text-lg text-muted-foreground">{tagline}</p>
 
-                <div className="mt-5 flex flex-wrap justify-center gap-3 md:justify-start">
-                    <Link
-                        href="/tentang"
-                        className="rounded-lg bg-utama px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
-                    >
-                        Tentang saya
+                <div className="mt-5 flex justify-center gap-3 md:justify-start">
+                    <Link href="/proyek" className={buttonVariants({ size: "lg" })}>
+                        Lihat Proyek
                     </Link>
-                    <a
-                        href="#keahlian"
-                        className="rounded-lg border border-input bg-card px-4 py-2 text-sm font-semibold text-muted-foreground hover:bg-gray-50"
-                    >
-                        Lihat keahlian
-                    </a>
+                    <Link href="/kontak" className={buttonVariants({ variant: "outline", size: "lg" })}>
+                        Hubungi Saya
+                    </Link>
                 </div>
             </div>
         </section>

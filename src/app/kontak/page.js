@@ -1,4 +1,5 @@
 import FormKontak from "@/components/FormKontak";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
   title: "Kontak",
@@ -19,30 +20,42 @@ export default function Kontak() {
 
       <div className="mt-8 grid gap-6 md:grid-cols-3">
         {/* Formulir Kontak (Mengambil 2 Kolom) */}
-        <div className="rounded-xl border border-gray-100 bg-card p-6 shadow-sm md:col-span-2">
-          <FormKontak />
-        </div>
+        <Card className="md:col-span-2">
+          <CardContent>
+            <FormKontak />
+          </CardContent>
+        </Card>
 
         {/* Kotak Temukan Saya di */}
-        <div className="rounded-xl border border-gray-100 bg-card p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-primary">Temukan Saya di</h2>
-          <div className="mt-4 space-y-2">
-            <a
-              href="https://github.com/AgungCahyo02"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block font-semibold text-red-600 hover:underline"
-            >
-              GitHub &rarr;
-            </a>
-            <a
-              href="mailto:agungrplkanesa@gmail.com"
-              className="block font-semibold text-red-600 hover:underline"
-            >
-              agungrplkanesa@gmail.com
-            </a>
-          </div>
-        </div>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold text-primary">
+              Temukan Saya di
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="https://github.com/AgungCahyo02"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-aksen hover:underline"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:agungrplkanesa@gmail.com"
+                  className="text-aksen hover:underline"
+                >
+                  agungrplkanesa@gmail.com
+                </a>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
       </div>
     </main>
   );

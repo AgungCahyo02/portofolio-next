@@ -4,9 +4,12 @@ import SkillCard from "@/components/SkillCard";
 import ProyekCard from "@/components/ProyekCard";
 import { buttonVariants } from "@/components/ui/button";
 import { supabase } from "@/lib/supabase";
-import { keahlian } from "@/data/keahlian";
 
 export default async function Home() {
+  const { data: skills } = await supabase
+    .from("skills")
+    .select("*")
+    .order("id");
   const { data: proyekTerbaru } = await supabase
     .from("projects")
     .select("*")
@@ -24,8 +27,8 @@ export default async function Home() {
       <section id="keahlian" className="scroll-mt-6">
         <h2 className="mb-4 text-2xl font-bold text-primary">Keahlian</h2>
         <div className="grid gap-4 md:grid-cols-3">
-          {keahlian.map((item) => (
-            <SkillCard key={item.slug} nama={item.nama} level={item.level} />
+          {skills && skills.map((item) => (
+            <SkillCard key={item.id} nama={item.nama} level={item.level} />
           ))}
         </div>
         <Link

@@ -131,6 +131,7 @@ export default function FormKontak() {
 
         <button
           type="submit"
+          size="lg"
           className="rounded-lg bg-red-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-red-700"
         >
           Kirim Pesan
