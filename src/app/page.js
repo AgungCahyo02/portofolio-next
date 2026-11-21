@@ -15,7 +15,7 @@ export default async function Home() {
   const { data: proyekTerbaru } = await supabase
     .from("projects")
     .select("*")
-    .order("created_at", { ascending: false })
+    .order("created_at", { ascending: true })
     .limit(3);
 
   return (
