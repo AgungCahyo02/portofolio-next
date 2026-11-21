@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const kelasInput =
   "mt-1 w-full rounded-lg border border-input bg-card p-2 text-foreground focus:outline-none focus:ring-2 focus:ring-utama";
@@ -129,16 +130,12 @@ export default function FormKontak() {
           {error.pesan && <p className="mt-1 text-sm text-aksen">{error.pesan}</p>}
         </div>
 
-        <button
-          type="submit"
-          size="lg"
-          className="rounded-lg bg-red-600 px-5 py-2 font-semibold text-white transition-colors hover:bg-red-700"
-        >
+        <Button type="submit" size="lg">
           Kirim Pesan
-        </button>
+        </Button>
       </form>
 
-      <p className="mt-4 text-xs text-gray-500">
+      <p className="mt-4 text-xs text-muted-foreground">
         *Formulir belum mengirim pesan. Pengiriman pesan dipelajari di Minggu 15.
       </p>
 
