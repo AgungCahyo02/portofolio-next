@@ -5,6 +5,8 @@ import ProyekCard from "@/components/ProyekCard";
 import { buttonVariants } from "@/components/ui/button";
 import { supabase } from "@/lib/supabase";
 
+export const revalidate = 60;
+
 export default async function Home() {
   const { data: skills } = await supabase
     .from("skills")

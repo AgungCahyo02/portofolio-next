@@ -1,6 +1,8 @@
 import FilterProyek from "@/components/FilterProyek";
 import { supabase } from "@/lib/supabase";
 
+export const revalidate = 60;
+
 export const metadata = {
   title: "Proyek",
   description: "Daftar proyek HTML, CSS, dan JavaScript karya Agung Cahyo.",
